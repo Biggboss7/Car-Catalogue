@@ -1,0 +1,100 @@
+:root {
+  --bright-orange : hsl(31, 77%, 52%);
+  --dark-cyan : hsl(184, 100%, 22%);
+  --very-dark-cyan : hsl(179, 100%, 13%);
+  --light-gray : hsl(0, 0%, 95%);
+  --transparent : hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  color: var(--transparent);
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9375rem;
+  line-height: 25px;
+}
+
+.btn {
+  width: 9.125rem;
+  height: 3rem;
+  display: block;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.9375rem;
+  color: inherit;
+  border-style: none;
+  border-radius: 30px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: inherit;
+  border:2px solid white;
+}
+
+.bg-orange {
+  background-color: var(--bright-orange);
+}
+
+.bg-cyan {
+  background-color: var(--dark-cyan);
+}
+
+.bg-green {
+  background-color: var(--very-dark-cyan);
+}
+
+.orange {
+  color: var(--bright-orange);
+}
+
+.cyan {
+  color: var(--dark-cyan);
+}
+
+.green {
+  color: var(--very-dark-cyan);
+}
+
+.heading {
+  margin:3rem 0;
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.5rem;
+}
+
+.grid-container {
+  width: 57.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px,1fr));
+  grid-template-rows: 31.25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.container {
+  padding: 3rem;
+}
+
+.content {
+  margin-bottom: 3.5rem;
+}
+
+@media only screen and (min-width:580px) and (max-width:870px) {
+  .span-2 {
+    grid-column: auto/span 2;
+  }
+}
